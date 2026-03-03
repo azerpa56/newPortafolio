@@ -1,24 +1,51 @@
 package com.email.apiEmail.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Map;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("/api")
 public class SendMail {
-	
-	@Autowired
-    private EmailService emailService;
-	
+
+    private final EmailService emailService;
+
+    public SendMail(EmailService emailService) {
+        this.emailService = emailService;
+    }
+
+    @CrossOrigin(origins = "${app.cors.allowed-origin}")
 	@PostMapping("/sendMail")	
-    public void sendEmail(@RequestBody DataDTO dataDTO) {
-        emailService.sendEmail(dataDTO);
-        emailService.sendEmailClient(dataDTO);
+    public ResponseEntity<Map<String, String>> sendEmail(@RequestBody DataDTO dataDTO) {
+        if (isBlank(dataDTO.getName()) || isBlank(dataDTO.getEmail()) || isBlank(dataDTO.getMsg())) {
+            return ResponseEntity.badRequest().body(Map.of(
+                    "status", "error",
+                    "message", "name, email y msg son obligatorios"
+            ));
+        }
+
+        try {
+            emailService.sendContactEmails(dataDTO);
+            return ResponseEntity.ok(Map.of(
+                    "status", "ok",
+                    "message", "Correo enviado correctamente"
+            ));
+        } catch (Exception ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of(
+                    "status", "error",
+                    "message", "No se pudo enviar el correo"
+            ));
+        }
+    }
+
+    private boolean isBlank(String value) {
+        return value == null || value.trim().isEmpty();
     }
 }
 
