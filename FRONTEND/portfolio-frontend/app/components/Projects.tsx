@@ -17,13 +17,14 @@ export function Projects() {
       demo: 'https://example.com',
     },
     {
-      title: t('projects.project2.title'),
-      description: t('projects.project2.description'),
+      title: 'Finanzas App',
+      description:
+        'Aplicación web de finanzas para gestionar y visualizar información financiera de forma clara e intuitiva.',
       image:
         'https://images.unsplash.com/photo-1661246626039-5429b8f7488a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMG1vYmlsZSUyMGFwcHxlbnwxfHx8fDE3NjYwMjI2NTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['React Native', 'Firebase', 'TypeScript'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+      tags: ['Next.js', 'TypeScript', 'Finanzas'],
+      github: 'https://finanzas.front.servergorazer.uk/',
+      demo: 'https://finanzas.front.servergorazer.uk/',
     },
     {
       title: t('projects.project3.title'),
