@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Moon, Sun, Languages } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -18,13 +19,6 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -35,39 +29,33 @@ export function Header() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <button
-            onClick={() => scrollToSection('hero')}
-            className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          <Link
+            href="/"
+            className="text-xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
           >
-            Portfolio
-          </button>
+            Alejandro Zerpa
+          </Link>
 
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-6">
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              <Link
+                href="/portafolio"
+                className="text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
               >
-                {t('nav.about')}
-              </button>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                Portafolio
+              </Link>
+              <Link
+                href="/sobremi"
+                className="text-gray-700 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
               >
-                {t('nav.projects')}
-              </button>
-              <button
-                onClick={() => scrollToSection('skills')}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                Sobre mí
+              </Link>
+              <Link
+                href="/contacto"
+                className="rounded-lg bg-linear-to-r from-blue-600 to-purple-600 px-6 py-2 text-white transition-shadow hover:shadow-lg"
               >
-                {t('nav.skills')}
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-shadow"
-              >
-                {t('nav.contact')}
-              </button>
+                Contacto
+              </Link>
             </nav>
 
             <div className="flex items-center gap-2 ml-2">
