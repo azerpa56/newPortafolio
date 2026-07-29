@@ -10,13 +10,29 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+function readStoredTheme(): Theme | null {
+  try {
+    return localStorage.getItem('theme') as Theme | null;
+  } catch {
+    return null;
+  }
+}
+
+function writeStoredTheme(theme: Theme) {
+  try {
+    localStorage.setItem('theme', theme);
+  } catch {
+    // localStorage may be unavailable (blocked storage, sandboxed iframe, private mode).
+  }
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const saved = localStorage.getItem('theme') as Theme | null;
+    const saved = readStoredTheme();
     if (saved) {
       setTheme(saved);
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -26,13 +42,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!mounted) return;
-    console.log('Theme changing to:', theme);
-    localStorage.setItem('theme', theme);
+    writeStoredTheme(theme);
     document.documentElement.classList.toggle('dark', theme === 'dark');
   }, [theme, mounted]);
 
   const toggleTheme = () => {
-    console.log('Toggle theme called, current:', theme);
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 

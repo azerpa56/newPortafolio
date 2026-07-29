@@ -75,13 +75,29 @@ const translations: Translations = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+function readStoredLanguage(): Language | null {
+  try {
+    return localStorage.getItem('language') as Language | null;
+  } catch {
+    return null;
+  }
+}
+
+function writeStoredLanguage(language: Language) {
+  try {
+    localStorage.setItem('language', language);
+  } catch {
+    // localStorage may be unavailable (blocked storage, sandboxed iframe, private mode).
+  }
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('es');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const savedLanguage = localStorage.getItem('language') as Language;
+    const savedLanguage = readStoredLanguage();
     if (savedLanguage) {
       setLanguage(savedLanguage);
     } else {
@@ -92,7 +108,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (mounted) {
-      localStorage.setItem('language', language);
+      writeStoredLanguage(language);
     }
   }, [language, mounted]);
 
