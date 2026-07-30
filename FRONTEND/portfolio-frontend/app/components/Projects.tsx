@@ -8,32 +8,67 @@ export function Projects() {
 
   const projects = [
     {
-      title: t('projects.project1.title'),
-      description: t('projects.project1.description'),
+      title: t('projects.sat.title'),
+      description: t('projects.sat.description'),
       image:
-        'https://images.unsplash.com/photo-1677214467820-ab069619bbb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzY1OTQ5NTg5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+        'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      tags: ['Next.js', 'Spring Boot', 'TypeScript'],
+      github: null,
+      demo: 'https://sat-restaurante.servergorazer.uk',
     },
     {
-      title: 'Finanzas App',
-      description:
-        'Aplicación web de finanzas para gestionar y visualizar información financiera de forma clara e intuitiva.',
+      title: t('projects.sav.title'),
+      description: t('projects.sav.description'),
       image:
-        'https://images.unsplash.com/photo-1661246626039-5429b8f7488a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMG1vYmlsZSUyMGFwcHxlbnwxfHx8fDE3NjYwMjI2NTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        'https://images.unsplash.com/photo-1553413077-190dd305871c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      tags: ['Next.js', 'Spring Boot', 'TypeScript'],
+      github: null,
+      demo: 'https://sav.servergorazer.uk/',
+    },
+    {
+      title: t('projects.gorazerShop.title'),
+      description: t('projects.gorazerShop.description'),
+      image:
+        'https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      tags: ['Next.js', 'Tailwind CSS', 'E-commerce'],
+      github: null,
+      demo: 'https://gorazer.servergorazer.uk/',
+    },
+    {
+      title: t('projects.gorazerDev.title'),
+      description: t('projects.gorazerDev.description'),
+      image:
+        'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      tags: ['Next.js', 'Vercel', 'Portfolio'],
+      github: null,
+      demo: 'https://gorazer.vercel.app/',
+    },
+    {
+      title: t('projects.lulu.title'),
+      description: t('projects.lulu.description'),
+      image:
+        'https://images.unsplash.com/photo-1677214467820-ab069619bbb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      tags: ['Next.js', 'Spring Boot', 'Gemini AI'],
+      github: null,
+      demo: 'https://lulu.servergorazer.uk/',
+    },
+    {
+      title: t('projects.finanzas.title'),
+      description: t('projects.finanzas.description'),
+      image:
+        'https://images.unsplash.com/photo-1661246626039-5429b8f7488a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
       tags: ['Next.js', 'TypeScript', 'Finanzas'],
-      github: 'https://finanzas.front.servergorazer.uk/',
-      demo: 'https://finanzas.front.servergorazer.uk/',
+      github: null,
+      demo: 'https://finanzas.front.servergorazer.uk',
     },
     {
-      title: t('projects.project3.title'),
-      description: t('projects.project3.description'),
+      title: t('projects.teampilot.title'),
+      description: t('projects.teampilot.description'),
       image:
-        'https://images.unsplash.com/photo-1666723043169-22e29545675c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b3Jrc3BhY2UlMjBkZXNrfGVufDF8fHx8MTc2NTk1NTQ2NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['Vue.js', 'D3.js', 'Python'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
+        'https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      tags: ['React', 'Vite', 'TypeScript', 'shadcn/ui'],
+      github: null,
+      demo: 'https://team-pilot.servergorazer.uk/',
     },
   ];
 
@@ -95,15 +130,17 @@ export function Projects() {
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-                      >
-                        <Github className="w-5 h-5" />
-                        <span>{t('projects.code')}</span>
-                      </a>
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                        >
+                          <Github className="w-5 h-5" />
+                          <span>{t('projects.code')}</span>
+                        </a>
+                      )}
                       <a
                         href={project.demo}
                         target="_blank"
