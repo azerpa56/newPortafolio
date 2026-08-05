@@ -29,6 +29,7 @@ const translations: Translations = {
   'hero.description': { es: 'Especializado en crear interfaces web modernas, interactivas y responsivas. Apasionado por transformar ideas en soluciones digitales innovadoras con tecnologías de vanguardia.', en: 'Specialized in creating modern, interactive and responsive web interfaces. Passionate about transforming ideas into innovative digital solutions with cutting-edge technologies.' },
   'hero.viewProjects': { es: 'Ver Proyectos', en: 'View Projects' },
   'hero.contact': { es: 'Contáctame', en: 'Contact Me' },
+  'hero.downloadCV': { es: 'Descargar CV', en: 'Download CV' },
   
   // About
   'about.title': { es: 'Sobre mí', en: 'About Me' },
@@ -62,23 +63,43 @@ const translations: Translations = {
   // Skills
   'skills.title': { es: 'Habilidades', en: 'Skills' },
   'skills.subtitle': { es: 'Tecnologías y herramientas con las que trabajo día a día', en: 'Technologies and tools I work with daily' },
-  'skills.frontend': { es: 'Frontend', en: 'Frontend' },
-  'skills.backend': { es: 'Backend', en: 'Backend' },
-  'skills.tools': { es: 'Herramientas', en: 'Tools' },
+  'skills.hint': { es: 'Pasa el cursor sobre un ícono para ver el detalle', en: 'Hover an icon to see the detail' },
+
+  // Skills - descriptions
+  'skills.react.desc': { es: 'Construyo interfaces dinámicas con componentes reutilizables, hooks y manejo de estado.', en: 'I build dynamic interfaces with reusable components, hooks and state management.' },
+  'skills.nextjs.desc': { es: 'Desarrollo aplicaciones con SSR/SSG, rutas API y optimización de rendimiento.', en: 'I develop apps with SSR/SSG, API routes and performance optimization.' },
+  'skills.javascript.desc': { es: 'Programación en ES6+, manipulación del DOM y lógica asíncrona.', en: 'Programming in ES6+, DOM manipulation and asynchronous logic.' },
+  'skills.html.desc': { es: 'Marcado semántico y accesible para estructurar interfaces web.', en: 'Semantic, accessible markup to structure web interfaces.' },
+  'skills.css.desc': { es: 'Estilizado responsivo, animaciones y layouts con Flexbox/Grid.', en: 'Responsive styling, animations and Flexbox/Grid layouts.' },
+  'skills.python.desc': { es: 'Scripts, automatización y APIs backend con Python.', en: 'Scripts, automation and backend APIs with Python.' },
+  'skills.java.desc': { es: 'Desarrollo backend orientado a objetos con Java y Spring Boot.', en: 'Object-oriented backend development with Java and Spring Boot.' },
+  'skills.nodejs.desc': { es: 'Construcción de APIs REST y servicios backend con Node.js.', en: 'Building REST APIs and backend services with Node.js.' },
+  'skills.restapis.desc': { es: 'Diseño y consumo de APIs RESTful para conectar frontend y backend.', en: 'Designing and consuming RESTful APIs to connect frontend and backend.' },
+  'skills.git.desc': { es: 'Control de versiones, ramas y flujo de trabajo colaborativo.', en: 'Version control, branching and collaborative workflows.' },
+  'skills.github.desc': { es: 'Gestión de repositorios, Pull Requests y flujos de CI/CD.', en: 'Repository management, Pull Requests and CI/CD workflows.' },
+  'skills.tailwind.desc': { es: 'Diseño de interfaces rápido y consistente con utilidades CSS.', en: 'Fast, consistent UI design using utility-first CSS.' },
+  'skills.vscode.desc': { es: 'Editor principal con extensiones para productividad y debugging.', en: 'Main editor with extensions for productivity and debugging.' },
+  'skills.responsive.desc': { es: 'Interfaces adaptables a cualquier dispositivo y tamaño de pantalla.', en: 'Interfaces that adapt to any device and screen size.' },
   
   // Contact
   'contact.title': { es: 'Hablemos', en: "Let's Talk" },
   'contact.subtitle': { es: '¿Tienes un proyecto en mente? Estoy siempre abierto a nuevas oportunidades', en: 'Have a project in mind? I\'m always open to new opportunities' },
   'contact.info': { es: 'Información de Contacto', en: 'Contact Information' },
   'contact.email': { es: 'Email', en: 'Email' },
-  'contact.name': { es: 'Nombre', en: 'Name' },
-  'contact.message': { es: 'Mensaje', en: 'Message' },
-  'contact.send': { es: 'Enviar Mensaje', en: 'Send Message' },
-  'contact.success': { es: '¡Mensaje enviado! (Esto es una simulación)', en: 'Message sent! (This is a simulation)' },
-  
+  'contact.directTitle': { es: '¿Prefieres escribir directo?', en: 'Prefer to reach out directly?' },
+  'contact.directText': { es: 'Escríbeme por WhatsApp o correo y te respondo lo antes posible.', en: 'Message me on WhatsApp or email and I\'ll get back to you as soon as possible.' },
+  'contact.whatsappBtn': { es: 'Escribir por WhatsApp', en: 'Message on WhatsApp' },
+  'contact.emailBtn': { es: 'Enviar un Email', en: 'Send an Email' },
+
+  // WhatsApp
+  'whatsapp.message': { es: 'Hola Alejandro, vi tu portafolio y me gustaría contactarte.', en: 'Hi Alejandro, I saw your portfolio and I\'d like to get in touch.' },
+  'whatsapp.aria': { es: 'Contactar por WhatsApp', en: 'Contact via WhatsApp' },
+
+  // Scroll to top
+  'scrollTop.aria': { es: 'Volver arriba', en: 'Scroll to top' },
+
   // Footer
   'footer.rights': { es: 'Todos los derechos reservados.', en: 'All rights reserved.' },
-  'footer.made': { es: 'Hecho con ❤️ usando React y Tailwind CSS', en: 'Made with ❤️ using React and Tailwind CSS' },
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

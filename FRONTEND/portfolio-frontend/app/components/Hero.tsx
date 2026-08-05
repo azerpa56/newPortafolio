@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'motion/react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function Hero() {
@@ -51,7 +51,7 @@ export function Hero() {
             className="flex items-center justify-center gap-4 mb-12"
           >
             <a
-              href="https://github.com/alejandrozerpa"
+              href="https://github.com/azerpa56"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
@@ -59,7 +59,7 @@ export function Hero() {
               <Github className="w-6 h-6 text-gray-900 dark:text-white" />
             </a>
             <a
-              href="https://linkedin.com/in/alejandrozerpa"
+              href="https://www.linkedin.com/in/alejandro-zerpa-555a3b18b"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
@@ -67,7 +67,7 @@ export function Hero() {
               <Linkedin className="w-6 h-6 text-blue-600" />
             </a>
             <a
-              href="mailto:alejandrozerpa@example.com"
+              href="mailto:azerpa56@gmail.com"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
             >
               <Mail className="w-6 h-6 text-red-600" />
@@ -96,6 +96,14 @@ export function Hero() {
             >
               {t('hero.contact')}
             </button>
+            <a
+              href="/Alejandro-Zerpa-CV.pdf"
+              download
+              className="flex items-center gap-2 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-all"
+            >
+              <Download className="w-5 h-5" />
+              {t('hero.downloadCV')}
+            </a>
           </motion.div>
         </div>
       </div>

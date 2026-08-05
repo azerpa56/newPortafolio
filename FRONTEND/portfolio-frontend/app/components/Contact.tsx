@@ -1,31 +1,14 @@
 "use client";
 import { motion } from 'motion/react';
-import { Mail, Github, Linkedin } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, Github, Linkedin, MessageCircle } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import { useLanguage } from '../contexts/LanguageContext';
+
+const WHATSAPP_NUMBER = '584168920230';
 
 export function Contact() {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(t('contact.success'));
-    setFormData({ name: '', email: '', message: '' });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t('whatsapp.message'))}`;
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -54,7 +37,7 @@ export function Contact() {
               </h3>
               <div className="space-y-6">
                 <a
-                  href="mailto:tu@email.com"
+                  href="mailto:azerpa56@gmail.com"
                   className="group flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   <div className="p-3 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/30 dark:to-red-800/30 rounded-lg group-hover:scale-110 transition-transform border border-red-200 dark:border-red-800">
@@ -64,12 +47,29 @@ export function Contact() {
                     <div className="text-sm text-gray-500 dark:text-gray-400">
                       {t('contact.email')}
                     </div>
-                    <div>alejandrozerpa@example.com</div>
+                    <div>azerpa56@gmail.com</div>
                   </div>
                 </a>
 
                 <a
-                  href="https://github.com/alejandrozerpa"
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                  <div className="p-3 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30 rounded-lg group-hover:scale-110 transition-transform border border-green-200 dark:border-green-800">
+                    <SiWhatsapp className="w-6 h-6 text-[#25D366]" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">
+                      WhatsApp
+                    </div>
+                    <div>+58 416-8920230</div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://github.com/azerpa56"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -81,12 +81,12 @@ export function Contact() {
                     <div className="text-sm text-gray-500 dark:text-gray-400">
                       GitHub
                     </div>
-                    <div>github.com/alejandrozerpa</div>
+                    <div>github.com/azerpa56</div>
                   </div>
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/alejandrozerpa"
+                  href="https://www.linkedin.com/in/alejandro-zerpa-555a3b18b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -98,7 +98,7 @@ export function Contact() {
                     <div className="text-sm text-gray-500 dark:text-gray-400">
                       LinkedIn
                     </div>
-                    <div>linkedin.com/in/alejandrozerpa</div>
+                    <div>linkedin.com/in/alejandro-zerpa-555a3b18b</div>
                   </div>
                 </a>
               </div>
@@ -111,74 +111,35 @@ export function Contact() {
               className="relative group"
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
-              <form
-                onSubmit={handleSubmit}
-                className="relative space-y-6 p-8 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700"
-              >
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-gray-700 dark:text-gray-300 mb-2"
-                  >
-                    {t('contact.name')}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
-                  />
+              <div className="relative flex flex-col items-center justify-center text-center gap-5 p-8 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 h-full">
+                <div className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full border border-blue-200 dark:border-blue-800">
+                  <MessageCircle className="w-8 h-8 text-blue-600 dark:text-blue-400" />
                 </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-gray-700 dark:text-gray-300 mb-2"
+                <h3 className="text-2xl text-gray-900 dark:text-white">
+                  {t('contact.directTitle')}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {t('contact.directText')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 w-full mt-2">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 px-6 rounded-lg hover:shadow-lg hover:scale-105 transition-all"
                   >
-                    {t('contact.email')}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-gray-700 dark:text-gray-300 mb-2"
+                    <SiWhatsapp className="w-5 h-5" />
+                    {t('contact.whatsappBtn')}
+                  </a>
+                  <a
+                    href="mailto:azerpa56@gmail.com"
+                    className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:shadow-lg hover:scale-105 transition-all"
                   >
-                    {t('contact.message')}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none transition-all"
-                  />
+                    <Mail className="w-5 h-5" />
+                    {t('contact.emailBtn')}
+                  </a>
                 </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all"
-                >
-                  {t('contact.send')}
-                </button>
-              </form>
+              </div>
             </motion.div>
           </div>
         </motion.div>
