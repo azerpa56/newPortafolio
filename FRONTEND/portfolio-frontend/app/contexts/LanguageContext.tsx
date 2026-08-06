@@ -90,6 +90,7 @@ const translations: Translations = {
   'contact.directText': { es: 'Escríbeme por WhatsApp o correo y te respondo lo antes posible.', en: 'Message me on WhatsApp or email and I\'ll get back to you as soon as possible.' },
   'contact.whatsappBtn': { es: 'Escribir por WhatsApp', en: 'Message on WhatsApp' },
   'contact.emailBtn': { es: 'Enviar un Email', en: 'Send an Email' },
+  'contact.copied': { es: 'Correo copiado al portapapeles', en: 'Email copied to clipboard' },
 
   // WhatsApp
   'whatsapp.message': { es: 'Hola Alejandro, vi tu portafolio y me gustaría contactarte.', en: 'Hi Alejandro, I saw your portfolio and I\'d like to get in touch.' },

@@ -1,14 +1,23 @@
 "use client";
-import { motion } from 'motion/react';
-import { Mail, Github, Linkedin, MessageCircle } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Mail, Github, Linkedin, MessageCircle, Check } from 'lucide-react';
 import { SiWhatsapp } from 'react-icons/si';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const WHATSAPP_NUMBER = '584168920230';
+const EMAIL_ADDRESS = 'azerpa56@gmail.com';
 
 export function Contact() {
   const { t } = useLanguage();
   const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t('whatsapp.message'))}`;
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = () => {
+    navigator.clipboard?.writeText(EMAIL_ADDRESS).catch(() => {});
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -38,6 +47,7 @@ export function Contact() {
               <div className="space-y-6">
                 <a
                   href="mailto:azerpa56@gmail.com"
+                  onClick={handleEmailClick}
                   className="group flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   <div className="p-3 bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/30 dark:to-red-800/30 rounded-lg group-hover:scale-110 transition-transform border border-red-200 dark:border-red-800">
@@ -133,12 +143,26 @@ export function Contact() {
                   </a>
                   <a
                     href="mailto:azerpa56@gmail.com"
+                    onClick={handleEmailClick}
                     className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover:shadow-lg hover:scale-105 transition-all"
                   >
                     <Mail className="w-5 h-5" />
                     {t('contact.emailBtn')}
                   </a>
                 </div>
+                <AnimatePresence>
+                  {copied && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 6 }}
+                      className="flex items-center gap-1.5 text-sm text-green-600 dark:text-green-400"
+                    >
+                      <Check className="w-4 h-4" />
+                      {t('contact.copied')}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.div>
           </div>
