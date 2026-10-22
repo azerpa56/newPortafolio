@@ -41,7 +41,7 @@ export function Projects() {
         'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
       tags: ['Next.js', 'Vercel', 'Portfolio'],
       github: null,
-      demo: 'https://gorazer.vercel.app/',
+      demo: 'https://servergorazer.uk/',
     },
     {
       title: t('projects.lulu.title'),
