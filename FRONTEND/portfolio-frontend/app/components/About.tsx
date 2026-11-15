@@ -30,8 +30,12 @@ export function About() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
               <img
-                src="/portfolio.png"
+                src="/portfolio.jpg"
                 alt="Alejandro Zerpa"
+                width={960}
+                height={960}
+                loading="lazy"
+                decoding="async"
                 className="relative rounded-2xl shadow-2xl w-full object-cover"
               />
             </div>

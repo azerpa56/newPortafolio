@@ -4,7 +4,7 @@ import { Moon, Sun, Languages } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const SECTIONS = ['hero', 'about', 'projects', 'skills', 'contact'];
+const SECTIONS = ['hero', 'about', 'ai', 'experience', 'projects', 'skills', 'contact'];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +62,7 @@ export function Header() {
             onClick={() => scrollToSection('hero')}
             className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
           >
-            Portfolio
+            Alejandro Zerpa
           </button>
 
           <div className="flex items-center gap-4">
@@ -76,6 +76,26 @@ export function Header() {
                 }`}
               >
                 {t('nav.about')}
+              </button>
+              <button
+                onClick={() => scrollToSection('ai')}
+                className={`transition-colors ${
+                  activeSection === 'ai'
+                    ? 'text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                }`}
+              >
+                {t('nav.ai')}
+              </button>
+              <button
+                onClick={() => scrollToSection('experience')}
+                className={`transition-colors ${
+                  activeSection === 'experience'
+                    ? 'text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                }`}
+              >
+                {t('nav.experience')}
               </button>
               <button
                 onClick={() => scrollToSection('projects')}

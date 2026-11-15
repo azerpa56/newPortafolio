@@ -14,33 +14,70 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_TITLE = "Alejandro Zerpa | Desarrollador Full-Stack e Inteligencia Artificial";
+const SITE_DESCRIPTION =
+  "Desarrollador full-stack especializado en IA aplicada: sistemas de gestión con Next.js y Spring Boot, integración de modelos generativos (Gemini), agentes y automatizaciones con n8n.";
+
 export const metadata: Metadata = {
-  title: "Alejandro Zerpa | Desarrollador Web Frontend",
-  description:
-    "Portafolio de Alejandro Zerpa, desarrollador web frontend especializado en React, Next.js y TypeScript. Interfaces modernas, interactivas y responsivas.",
+  metadataBase: new URL("https://alejandro-zerpa.tech"),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   keywords: [
     "Alejandro Zerpa",
-    "desarrollador frontend",
-    "React",
+    "desarrollador full-stack",
+    "inteligencia artificial",
+    "IA aplicada",
+    "desarrollador IA",
+    "Gemini AI",
+    "agentes de IA",
+    "n8n",
     "Next.js",
-    "JavaScript",
+    "Spring Boot",
+    "React",
     "TypeScript",
     "portafolio desarrollador",
   ],
-  authors: [{ name: "Alejandro Zerpa" }],
+  authors: [{ name: "Alejandro Zerpa", url: "https://alejandro-zerpa.tech" }],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Alejandro Zerpa | Desarrollador Web Frontend",
-    description:
-      "Portafolio de Alejandro Zerpa, desarrollador web frontend especializado en React, Next.js y TypeScript.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "https://alejandro-zerpa.tech",
+    siteName: "Alejandro Zerpa",
     type: "website",
     locale: "es_ES",
   },
   twitter: {
-    card: "summary",
-    title: "Alejandro Zerpa | Desarrollador Web Frontend",
-    description:
-      "Portafolio de Alejandro Zerpa, desarrollador web frontend especializado en React, Next.js y TypeScript.",
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
+};
+
+const PERSON_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Alejandro Zerpa",
+  url: "https://alejandro-zerpa.tech",
+  image: "https://alejandro-zerpa.tech/portfolio.jpg",
+  jobTitle: "Desarrollador Full-Stack especializado en Inteligencia Artificial",
+  worksFor: { "@type": "Organization", name: "Gorazer", url: "https://servergorazer.uk" },
+  knowsAbout: [
+    "Inteligencia Artificial",
+    "Gemini AI",
+    "Agentes de IA",
+    "n8n",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Spring Boot",
+    "PostgreSQL",
+    "Docker",
+  ],
+  sameAs: [
+    "https://github.com/azerpa56",
+    "https://www.linkedin.com/in/alejandro-zerpa-555a3b18b",
+  ],
 };
 
 export default function RootLayout({
@@ -57,6 +94,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){} })()`,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}
         />
         <ThemeProvider>
           <LanguageProvider>{children}</LanguageProvider>

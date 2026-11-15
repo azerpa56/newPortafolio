@@ -2,6 +2,7 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { openContactModal } from './ContactModal';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -27,7 +28,7 @@ export function Hero() {
           >
             <div className="inline-block mb-4 px-4 py-2 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-200 dark:border-gray-700">
               <span className="text-sm text-gray-700 dark:text-gray-300">
-                ✨ {t('hero.greeting')}
+                ✨ {t('hero.badge')}
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl mb-6 text-gray-900 dark:text-white">
@@ -54,6 +55,7 @@ export function Hero() {
               href="https://github.com/azerpa56"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
             >
               <Github className="w-6 h-6 text-gray-900 dark:text-white" />
@@ -62,16 +64,19 @@ export function Hero() {
               href="https://www.linkedin.com/in/alejandro-zerpa-555a3b18b"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
             >
               <Linkedin className="w-6 h-6 text-blue-600" />
             </a>
-            <a
-              href="mailto:azerpa56@gmail.com"
+            <button
+              type="button"
+              onClick={openContactModal}
+              aria-label="Email"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
             >
               <Mail className="w-6 h-6 text-red-600" />
-            </a>
+            </button>
           </motion.div>
 
           <motion.div
