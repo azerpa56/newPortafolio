@@ -129,6 +129,22 @@ const translations: Translations = {
   'contact.emailBtn': { es: 'Enviar un Email', en: 'Send an Email' },
   'contact.copied': { es: 'Correo copiado al portapapeles', en: 'Email copied to clipboard' },
 
+  // Contact form (modal)
+  'contactForm.title': { es: 'Escríbeme', en: 'Write to me' },
+  'contactForm.subtitle': { es: 'Cuéntame sobre tu proyecto y te respondo por correo, normalmente en menos de 24 horas.', en: "Tell me about your project and I'll reply by email, usually within 24 hours." },
+  'contactForm.name': { es: 'Nombre', en: 'Name' },
+  'contactForm.email': { es: 'Correo', en: 'Email' },
+  'contactForm.company': { es: 'Empresa (opcional)', en: 'Company (optional)' },
+  'contactForm.message': { es: 'Mensaje', en: 'Message' },
+  'contactForm.messagePlaceholder': { es: '¿Qué necesitas construir o automatizar?', en: 'What do you need to build or automate?' },
+  'contactForm.send': { es: 'Enviar mensaje', en: 'Send message' },
+  'contactForm.sending': { es: 'Enviando…', en: 'Sending…' },
+  'contactForm.sentTitle': { es: '¡Mensaje enviado!', en: 'Message sent!' },
+  'contactForm.sentText': { es: 'Te llegará una confirmación a tu correo. Te responderé lo antes posible.', en: "You'll get a confirmation email. I'll get back to you as soon as possible." },
+  'contactForm.ref': { es: 'Referencia', en: 'Reference' },
+  'contactForm.close': { es: 'Cerrar', en: 'Close' },
+  'contactForm.error': { es: 'No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme directo a', en: "The message couldn't be sent. Try again or email me directly at" },
+
   // WhatsApp
   'whatsapp.message': { es: 'Hola Alejandro, vi tu portafolio y me gustaría contactarte.', en: 'Hi Alejandro, I saw your portfolio and I\'d like to get in touch.' },
   'whatsapp.aria': { es: 'Contactar por WhatsApp', en: 'Contact via WhatsApp' },

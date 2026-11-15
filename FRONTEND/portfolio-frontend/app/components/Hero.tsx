@@ -2,6 +2,7 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { openContactModal } from './ContactModal';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -68,13 +69,14 @@ export function Hero() {
             >
               <Linkedin className="w-6 h-6 text-blue-600" />
             </a>
-            <a
-              href="mailto:azerpa56@gmail.com"
+            <button
+              type="button"
+              onClick={openContactModal}
               aria-label="Email"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
             >
               <Mail className="w-6 h-6 text-red-600" />
-            </a>
+            </button>
           </motion.div>
 
           <motion.div
