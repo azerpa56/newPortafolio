@@ -21,15 +21,14 @@ const translations: Translations = {
   'nav.about': { es: 'Sobre mí', en: 'About' },
   'nav.projects': { es: 'Proyectos', en: 'Projects' },
   'nav.skills': { es: 'Habilidades', en: 'Skills' },
-  'nav.ai': { es: 'IA', en: 'AI' },
   'nav.experience': { es: 'Experiencia', en: 'Experience' },
   'nav.contact': { es: 'Contacto', en: 'Contact' },
   
   // Hero
   'hero.greeting': { es: 'Hola, soy', en: "Hi, I'm" },
-  'hero.badge': { es: 'Full-Stack · IA aplicada', en: 'Full-Stack · Applied AI' },
-  'hero.role': { es: 'Desarrollador Full-Stack especializado en Inteligencia Artificial', en: 'Full-Stack Developer specialized in Artificial Intelligence' },
-  'hero.description': { es: 'Construyo sistemas de gestión que usan negocios reales (facturación, inventario, POS y restaurantes) con Next.js y Spring Boot, y les integro IA: modelos generativos, agentes y automatizaciones que ahorran horas de trabajo.', en: 'I build management systems used by real businesses (invoicing, inventory, POS and restaurants) with Next.js and Spring Boot, and I integrate AI into them: generative models, agents and automations that save hours of work.' },
+  'hero.badge': { es: 'Desarrollador Full-Stack', en: 'Full-Stack Developer' },
+  'hero.role': { es: 'Desarrollador Full-Stack | Next.js · Spring Boot', en: 'Full-Stack Developer | Next.js · Spring Boot' },
+  'hero.description': { es: 'Construyo sistemas de gestión que usan negocios reales (facturación, inventario, POS y restaurantes), de la interfaz al servidor.', en: 'I build management systems used by real businesses (invoicing, inventory, POS and restaurants), from the interface to the server.' },
   'hero.viewProjects': { es: 'Ver Proyectos', en: 'View Projects' },
   'hero.contact': { es: 'Contáctame', en: 'Contact Me' },
   'hero.downloadCV': { es: 'Descargar CV', en: 'Download CV' },
@@ -37,8 +36,8 @@ const translations: Translations = {
   // About
   'about.title': { es: 'Sobre mí', en: 'About Me' },
   'about.p1': { es: 'Soy Alejandro Zerpa, desarrollador full-stack y fundador de Gorazer. Diseño y construyo software de punta a punta: la interfaz en React/Next.js, el backend en Spring Boot, la base de datos en PostgreSQL y el despliegue en mi propio servidor con Docker.', en: "I'm Alejandro Zerpa, a full-stack developer and founder of Gorazer. I design and build software end to end: the interface in React/Next.js, the backend in Spring Boot, the database in PostgreSQL and the deployment on my own server with Docker." },
-  'about.p2': { es: 'Mi diferencial es la Inteligencia Artificial aplicada. Integro modelos como Gemini en productos reales (como Lulu, un generador de apps web por chat), automatizo procesos con n8n y trabajo a diario con agentes de programación con IA para entregar más rápido sin sacrificar calidad.', en: 'My edge is applied Artificial Intelligence. I integrate models like Gemini into real products (such as Lulu, a chat-based web app generator), automate processes with n8n and work daily with AI coding agents to ship faster without sacrificing quality.' },
-  'about.p3': { es: 'Mis sistemas resuelven problemas concretos de empresas: control de restaurantes, almacenes, puntos de venta y mantenimiento de maquinaria. Busco proyectos y equipos donde la IA y el buen software generen un impacto medible.', en: 'My systems solve concrete business problems: restaurant management, warehouses, points of sale and machinery maintenance. I look for projects and teams where AI and good software create measurable impact.' },
+  'about.p2': { es: 'Me gusta resolver el problema completo: entender cómo trabaja el negocio, modelar los datos, construir la interfaz y la API, y dejarlo funcionando en producción. También automatizo procesos con n8n para eliminar tareas manuales.', en: 'I like solving the whole problem: understanding how the business works, modeling the data, building the interface and the API, and leaving it running in production. I also automate processes with n8n to eliminate manual tasks.' },
+  'about.p3': { es: 'Mis sistemas resuelven problemas concretos de empresas: control de restaurantes, almacenes, puntos de venta y mantenimiento de maquinaria. Busco proyectos y equipos donde el buen software genere un impacto medible.', en: 'My systems solve concrete business problems: restaurant management, warehouses, points of sale and machinery maintenance. I look for projects and teams where good software creates measurable impact.' },
   'about.completedProjects': { es: 'Proyectos Completados', en: 'Completed Projects' },
   'about.yearsExperience': { es: 'Años de Experiencia', en: 'Years of Experience' },
   'about.certifications': { es: 'Tecnologías Dominadas', en: 'Technologies Mastered' },
@@ -63,23 +62,13 @@ const translations: Translations = {
   'projects.code': { es: 'Código', en: 'Code' },
   'projects.demo': { es: 'Demo', en: 'Demo' },
   
-  // AI
-  'ai.title': { es: 'Inteligencia Artificial aplicada', en: 'Applied Artificial Intelligence' },
-  'ai.subtitle': { es: 'No solo uso IA: la convierto en funcionalidades que resuelven problemas reales', en: "I don't just use AI: I turn it into features that solve real problems" },
-  'ai.products.title': { es: 'Productos con IA generativa', en: 'Generative AI products' },
-  'ai.products.desc': { es: 'Integro modelos de lenguaje (Gemini API) en aplicaciones web. Mi proyecto Lulu genera apps completas a partir de una conversación y muestra una vista previa en vivo del código generado.', en: 'I integrate language models (Gemini API) into web apps. My project Lulu generates complete apps from a conversation and shows a live preview of the generated code.' },
-  'ai.automation.title': { es: 'Automatización inteligente', en: 'Intelligent automation' },
-  'ai.automation.desc': { es: 'Diseño flujos en n8n que conectan modelos de IA con APIs, bases de datos y canales de mensajería para eliminar tareas manuales y repetitivas.', en: 'I design n8n workflows that connect AI models with APIs, databases and messaging channels to eliminate manual, repetitive tasks.' },
-  'ai.agents.title': { es: 'Desarrollo con agentes de IA', en: 'AI-agent-driven development' },
-  'ai.agents.desc': { es: 'Trabajo a diario con agentes de programación (Claude, Gemini) para diseñar, revisar y desplegar software más rápido, manteniendo control total sobre la arquitectura y la calidad del código.', en: 'I work daily with coding agents (Claude, Gemini) to design, review and ship software faster, while keeping full control over architecture and code quality.' },
-
   // Experience
   'experience.title': { es: 'Experiencia', en: 'Experience' },
   'experience.subtitle': { es: 'Mi recorrido profesional en desarrollo de software', en: 'My professional path in software development' },
   'experience.present': { es: 'Actual', en: 'Present' },
   'experience.remote': { es: 'Remoto', en: 'Remote' },
   'experience.isep.role': { es: 'Programador', en: 'Software Developer' },
-  'experience.isep.desc': { es: 'Desarrollo y mantenimiento de aplicaciones web en un equipo remoto, incorporando herramientas de IA al flujo de desarrollo.', en: 'Development and maintenance of web applications in a remote team, bringing AI tools into the development workflow.' },
+  'experience.isep.desc': { es: 'Desarrollo y mantenimiento de aplicaciones web en un equipo remoto.', en: 'Development and maintenance of web applications in a remote team.' },
   'experience.gorazer.role': { es: 'Fundador y Desarrollador Full-Stack', en: 'Founder & Full-Stack Developer' },
   'experience.gorazer.desc': { es: 'Desarrollo de software a medida para empresas: sistemas de restaurante, almacén, POS e inventario, y mantenimiento de maquinaria pesada. Stack Next.js + Spring Boot + PostgreSQL, autoalojado con Docker.', en: 'Custom software for businesses: restaurant, warehouse, POS and inventory systems, plus heavy machinery maintenance. Next.js + Spring Boot + PostgreSQL stack, self-hosted with Docker.' },
   'experience.scraping.role': { es: 'Programador Junior', en: 'Junior Developer' },
@@ -113,9 +102,8 @@ const translations: Translations = {
   'skills.springboot.desc': { es: 'APIs REST robustas con Spring Boot, Hibernate y seguridad.', en: 'Robust REST APIs with Spring Boot, Hibernate and security.' },
   'skills.postgresql.desc': { es: 'Modelado de datos relacionales y consultas eficientes.', en: 'Relational data modeling and efficient queries.' },
   'skills.docker.desc': { es: 'Contenedores y despliegue de mis apps en servidor propio.', en: 'Containers and deployment of my apps on my own server.' },
-  'skills.gemini.desc': { es: 'Integración de modelos generativos en productos web.', en: 'Integrating generative models into web products.' },
-  'skills.claude.desc': { es: 'Agentes de programación con IA en mi flujo diario de desarrollo.', en: 'AI coding agents in my daily development workflow.' },
-  'skills.n8n.desc': { es: 'Automatizaciones que conectan IA, APIs y bases de datos.', en: 'Automations connecting AI, APIs and databases.' },
+  'skills.ai.desc': { es: 'Uso herramientas de IA como Claude y Gemini como apoyo en mi trabajo diario.', en: 'I use AI tools like Claude and Gemini to support my daily work.' },
+  'skills.n8n.desc': { es: 'Automatizaciones que conectan APIs, bases de datos y servicios.', en: 'Automations connecting APIs, databases and services.' },
   'skills.responsive.desc': { es: 'Interfaces adaptables a cualquier dispositivo y tamaño de pantalla.', en: 'Interfaces that adapt to any device and screen size.' },
   
   // Contact

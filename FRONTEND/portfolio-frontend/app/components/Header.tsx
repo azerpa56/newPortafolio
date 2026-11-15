@@ -4,7 +4,7 @@ import { Moon, Sun, Languages } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const SECTIONS = ['hero', 'about', 'ai', 'experience', 'projects', 'skills', 'contact'];
+const SECTIONS = ['hero', 'about', 'experience', 'projects', 'skills', 'contact'];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,16 +76,6 @@ export function Header() {
                 }`}
               >
                 {t('nav.about')}
-              </button>
-              <button
-                onClick={() => scrollToSection('ai')}
-                className={`transition-colors ${
-                  activeSection === 'ai'
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                }`}
-              >
-                {t('nav.ai')}
               </button>
               <button
                 onClick={() => scrollToSection('experience')}
