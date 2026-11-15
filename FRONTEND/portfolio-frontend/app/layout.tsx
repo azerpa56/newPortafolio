@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_TITLE = "Alejandro Zerpa | Desarrollador Full-Stack e Inteligencia Artificial";
+const SITE_TITLE = "Alejandro Zerpa | Desarrollador Full-Stack";
 const SITE_DESCRIPTION =
-  "Desarrollador full-stack especializado en IA aplicada: sistemas de gestión con Next.js y Spring Boot, integración de modelos generativos (Gemini), agentes y automatizaciones con n8n.";
+  "Portafolio de Alejandro Zerpa, desarrollador full-stack: sistemas de gestión para negocios reales con Next.js, React, Spring Boot y PostgreSQL.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alejandro-zerpa.tech"),
@@ -25,11 +25,6 @@ export const metadata: Metadata = {
   keywords: [
     "Alejandro Zerpa",
     "desarrollador full-stack",
-    "inteligencia artificial",
-    "IA aplicada",
-    "desarrollador IA",
-    "Gemini AI",
-    "agentes de IA",
     "n8n",
     "Next.js",
     "Spring Boot",
@@ -60,12 +55,9 @@ const PERSON_JSON_LD = {
   name: "Alejandro Zerpa",
   url: "https://alejandro-zerpa.tech",
   image: "https://alejandro-zerpa.tech/portfolio.jpg",
-  jobTitle: "Desarrollador Full-Stack especializado en Inteligencia Artificial",
+  jobTitle: "Desarrollador Full-Stack",
   worksFor: { "@type": "Organization", name: "Gorazer", url: "https://servergorazer.uk" },
   knowsAbout: [
-    "Inteligencia Artificial",
-    "Gemini AI",
-    "Agentes de IA",
     "n8n",
     "Next.js",
     "React",

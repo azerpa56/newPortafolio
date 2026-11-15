@@ -1,10 +1,10 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'Alejandro Zerpa — Desarrollador Full-Stack especializado en IA';
+export const alt = 'Alejandro Zerpa — Desarrollador Full-Stack';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-const TAGS = ['Next.js', 'Spring Boot', 'Gemini AI', 'n8n', 'PostgreSQL'];
+const TAGS = ['Next.js', 'React', 'Spring Boot', 'PostgreSQL', 'Docker'];
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -33,7 +33,7 @@ export default function OpengraphImage() {
               fontSize: 28,
             }}
           >
-            Full-Stack · IA aplicada
+            Next.js · Spring Boot
           </div>
         </div>
 
@@ -42,7 +42,7 @@ export default function OpengraphImage() {
             Alejandro Zerpa
           </div>
           <div style={{ display: 'flex', fontSize: 40, color: '#c7d2fe', marginTop: 12 }}>
-            Desarrollador Full-Stack especializado en IA
+            Desarrollador Full-Stack
           </div>
         </div>
 
