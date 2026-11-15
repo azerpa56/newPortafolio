@@ -27,7 +27,7 @@ export function Hero() {
           >
             <div className="inline-block mb-4 px-4 py-2 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-200 dark:border-gray-700">
               <span className="text-sm text-gray-700 dark:text-gray-300">
-                ✨ {t('hero.greeting')}
+                ✨ {t('hero.badge')}
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl mb-6 text-gray-900 dark:text-white">

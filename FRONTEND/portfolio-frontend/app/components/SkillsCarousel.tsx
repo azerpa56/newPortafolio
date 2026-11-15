@@ -12,10 +12,16 @@ import {
   SiGit,
   SiGithub,
   SiTailwindcss,
+  SiTypescript,
+  SiSpringboot,
+  SiPostgresql,
+  SiDocker,
+  SiGooglegemini,
+  SiClaude,
 } from 'react-icons/si';
 import { DiCss3Full, DiJava } from 'react-icons/di';
 import { VscVscode } from 'react-icons/vsc';
-import { Webhook, Smartphone } from 'lucide-react';
+import { Webhook, Smartphone, Workflow } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface Skill {
@@ -30,6 +36,13 @@ interface Skill {
 const skills: Skill[] = [
   { name: 'React', Icon: SiReact, color: '#61DAFB', level: 95, descKey: 'skills.react.desc' },
   { name: 'Next.js', Icon: SiNextdotjs, themeAdaptive: true, level: 90, descKey: 'skills.nextjs.desc' },
+  { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6', level: 90, descKey: 'skills.typescript.desc' },
+  { name: 'Spring Boot', Icon: SiSpringboot, color: '#6DB33F', level: 85, descKey: 'skills.springboot.desc' },
+  { name: 'PostgreSQL', Icon: SiPostgresql, color: '#4169E1', level: 85, descKey: 'skills.postgresql.desc' },
+  { name: 'Gemini AI', Icon: SiGooglegemini, color: '#8E75B2', level: 90, descKey: 'skills.gemini.desc' },
+  { name: 'Claude', Icon: SiClaude, color: '#D97757', level: 90, descKey: 'skills.claude.desc' },
+  { name: 'n8n', Icon: Workflow, color: '#EA4B71', level: 85, descKey: 'skills.n8n.desc' },
+  { name: 'Docker', Icon: SiDocker, color: '#2496ED', level: 80, descKey: 'skills.docker.desc' },
   { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E', level: 95, descKey: 'skills.javascript.desc' },
   { name: 'HTML5', Icon: SiHtml5, color: '#E34F26', level: 98, descKey: 'skills.html.desc' },
   { name: 'CSS3', Icon: DiCss3Full, color: '#1572B6', level: 98, descKey: 'skills.css.desc' },
