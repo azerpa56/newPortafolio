@@ -54,6 +54,32 @@ export const metadata: Metadata = {
   },
 };
 
+const PERSON_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Alejandro Zerpa",
+  url: "https://alejandro-zerpa.tech",
+  image: "https://alejandro-zerpa.tech/portfolio.jpg",
+  jobTitle: "Desarrollador Full-Stack especializado en Inteligencia Artificial",
+  worksFor: { "@type": "Organization", name: "Gorazer", url: "https://servergorazer.uk" },
+  knowsAbout: [
+    "Inteligencia Artificial",
+    "Gemini AI",
+    "Agentes de IA",
+    "n8n",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Spring Boot",
+    "PostgreSQL",
+    "Docker",
+  ],
+  sameAs: [
+    "https://github.com/azerpa56",
+    "https://www.linkedin.com/in/alejandro-zerpa-555a3b18b",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +94,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){} })()`,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}
         />
         <ThemeProvider>
           <LanguageProvider>{children}</LanguageProvider>

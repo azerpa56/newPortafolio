@@ -54,6 +54,7 @@ export function Hero() {
               href="https://github.com/azerpa56"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
             >
               <Github className="w-6 h-6 text-gray-900 dark:text-white" />
@@ -62,12 +63,14 @@ export function Hero() {
               href="https://www.linkedin.com/in/alejandro-zerpa-555a3b18b"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
             >
               <Linkedin className="w-6 h-6 text-blue-600" />
             </a>
             <a
               href="mailto:azerpa56@gmail.com"
+              aria-label="Email"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all border border-gray-200 dark:border-gray-700"
             >
               <Mail className="w-6 h-6 text-red-600" />
