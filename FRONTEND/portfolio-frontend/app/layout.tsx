@@ -56,7 +56,7 @@ const PERSON_JSON_LD = {
   url: "https://alejandro-zerpa.tech",
   image: "https://alejandro-zerpa.tech/portfolio.jpg",
   jobTitle: "Desarrollador Full-Stack",
-  worksFor: { "@type": "Organization", name: "Gorazer", url: "https://servergorazer.uk" },
+  worksFor: { "@type": "Organization", name: "Gorazer", url: "https://gorazer.tech" },
   knowsAbout: [
     "n8n",
     "Next.js",

@@ -8,6 +8,8 @@ interface Project {
   description: string;
   /** Logo real del proyecto (en /public/projects) */
   logo?: string;
+  /** Fondo detrás del logo (por defecto blanco) */
+  logoBg?: string;
   /** Si no hay logo: ícono y degradado para una tarjeta con el nombre */
   Icon?: LucideIcon;
   gradient?: string;
@@ -20,6 +22,15 @@ export function Projects() {
   const { t } = useLanguage();
 
   const projects: Project[] = [
+    {
+      title: t('projects.sinotruk.title'),
+      description: t('projects.sinotruk.description'),
+      logo: '/projects/sinotruk-picks.webp',
+      logoBg: 'bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950',
+      tags: ['Next.js', 'Vercel', 'Landing page'],
+      github: null,
+      demo: 'https://agencia-vehicular-navy.vercel.app/',
+    },
     {
       title: t('projects.sat.title'),
       description: t('projects.sat.description'),
@@ -51,7 +62,7 @@ export function Projects() {
       logo: '/projects/gorazer.webp',
       tags: ['Next.js', 'Vercel', 'Portfolio'],
       github: null,
-      demo: 'https://servergorazer.uk/',
+      demo: 'https://gorazer.tech/',
     },
     {
       title: t('projects.lulu.title'),
@@ -111,7 +122,7 @@ export function Projects() {
                 <div className="relative bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow border border-gray-200 dark:border-gray-700">
                   <div className="relative h-48 overflow-hidden">
                     {project.logo ? (
-                      <div className="w-full h-full bg-white flex items-center justify-center p-8 border-b border-gray-200 dark:border-gray-700">
+                      <div className={`w-full h-full ${project.logoBg ?? 'bg-white'} flex items-center justify-center p-8 border-b border-gray-200 dark:border-gray-700`}>
                         <img
                           src={project.logo}
                           alt={`Logo de ${project.title}`}
