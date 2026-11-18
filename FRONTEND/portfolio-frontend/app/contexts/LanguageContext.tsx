@@ -21,6 +21,7 @@ const translations: Translations = {
   'nav.about': { es: 'Sobre mí', en: 'About' },
   'nav.projects': { es: 'Proyectos', en: 'Projects' },
   'nav.skills': { es: 'Habilidades', en: 'Skills' },
+  'nav.gorazer': { es: 'Gorazer', en: 'Gorazer' },
   'nav.experience': { es: 'Experiencia', en: 'Experience' },
   'nav.contact': { es: 'Contacto', en: 'Contact' },
   
@@ -59,9 +60,23 @@ const translations: Translations = {
   'projects.finanzas.description': { es: 'Aplicación web de finanzas para gestionar y visualizar información financiera de forma clara e intuitiva.', en: 'Web finance application to manage and visualize financial information clearly and intuitively.' },
   'projects.teampilot.title': { es: 'TeamPilot', en: 'TeamPilot' },
   'projects.teampilot.description': { es: 'WorkFlow Hub: plataforma SaaS para la gestión de proyectos, tareas, equipos y finanzas corporativas.', en: 'WorkFlow Hub: SaaS platform for managing projects, tasks, teams and corporate finances.' },
+  'projects.sinotruk.title': { es: 'Sinotruk Picks', en: 'Sinotruk Picks' },
+  'projects.sinotruk.description': { es: 'Landing para concesionario de la pickup Sinotruk Bolden S6: recorrido cinemático pieza por pieza, ficha técnica, cotización y agenda de prueba de manejo.', en: 'Dealership landing page for the Sinotruk Bolden S6 pickup: a cinematic piece-by-piece tour, spec sheet, quotes and test-drive booking.' },
   'projects.code': { es: 'Código', en: 'Code' },
   'projects.demo': { es: 'Demo', en: 'Demo' },
   
+  // Gorazer
+  'gorazer.badge': { es: 'Fundador · desde 2024', en: 'Founder · since 2024' },
+  'gorazer.title': { es: 'Fundador de', en: 'Founder of' },
+  'gorazer.p1': { es: 'Gorazer es la empresa de desarrollo de software que fundé para crear soluciones digitales a medida que ayudan a los negocios a crecer. Lidero el desarrollo de sus productos de principio a fin: desde entender el negocio del cliente hasta dejar el sistema funcionando en producción.', en: "Gorazer is the software development company I founded to build custom digital solutions that help businesses grow. I lead the development of its products end to end: from understanding the client's business to leaving the system running in production." },
+  'gorazer.p2': { es: 'Trabajamos con startups, pymes y empresas en crecimiento que necesitan un aliado técnico confiable. Varios de los proyectos de este portafolio nacieron en Gorazer.', en: 'We work with startups, SMEs and growing companies that need a reliable technical partner. Several of the projects in this portfolio were born at Gorazer.' },
+  'gorazer.service.web': { es: 'Desarrollo web', en: 'Web development' },
+  'gorazer.service.backend': { es: 'Backend y APIs', en: 'Backend & APIs' },
+  'gorazer.service.pwa': { es: 'Aplicaciones web progresivas', en: 'Progressive web apps' },
+  'gorazer.service.integrations': { es: 'Integraciones y automatización', en: 'Integrations & automation' },
+  'gorazer.service.optimization': { es: 'Optimización y mantenimiento', en: 'Optimization & maintenance' },
+  'gorazer.cta': { es: 'Visitar gorazer.tech', en: 'Visit gorazer.tech' },
+
   // Experience
   'experience.title': { es: 'Experiencia', en: 'Experience' },
   'experience.subtitle': { es: 'Mi recorrido profesional en desarrollo de software', en: 'My professional path in software development' },
