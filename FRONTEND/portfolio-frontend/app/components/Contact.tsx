@@ -88,7 +88,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/alejandro-zerpa-555a3b18b"
+                  href="https://www.linkedin.com/in/alejandro-zerpa-dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -100,7 +100,7 @@ export function Contact() {
                     <div className="text-sm text-gray-500 dark:text-gray-400">
                       LinkedIn
                     </div>
-                    <div>linkedin.com/in/alejandro-zerpa-555a3b18b</div>
+                    <div>linkedin.com/in/alejandro-zerpa-dev</div>
                   </div>
                 </a>
               </div>

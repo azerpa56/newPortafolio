@@ -20,7 +20,7 @@ export function Footer() {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://www.linkedin.com/in/alejandro-zerpa-555a3b18b"
+            href="https://www.linkedin.com/in/alejandro-zerpa-dev/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

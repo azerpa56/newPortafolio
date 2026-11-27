@@ -6,23 +6,35 @@ import { useLanguage } from '../contexts/LanguageContext';
 interface Job {
   key: string;
   company: string;
+  /** Formato 'AAAA-MM' (igual que en el CV) */
   start: string;
   end: string | null;
-  remote: boolean;
+  mode: 'remote' | 'onsite';
 }
 
+// Mantener sincronizado con el CV (public/Alejandro-Zerpa-CV.pdf)
 const JOBS: Job[] = [
-  { key: 'isep', company: 'ISEP', start: '2026', end: null, remote: true },
-  { key: 'gorazer', company: 'Gorazer', start: '2024', end: null, remote: true },
-  { key: 'scraping', company: 'Scraping Code Solutions', start: '2024', end: '2025', remote: true },
-  { key: 'optiexpress', company: 'Optiexpress C.A.', start: '2023', end: '2023', remote: false },
+  { key: 'vidalsa', company: 'Constructora Vidalsa 27, C.A.', start: '2026-04', end: null, mode: 'onsite' },
+  { key: 'gorazer', company: 'Gorazer', start: '2024-01', end: null, mode: 'remote' },
+  { key: 'isep', company: 'ISEP', start: '2025-12', end: '2026-08', mode: 'remote' },
+  { key: 'scraping', company: 'Scraping Code Solutions', start: '2024-04', end: '2025-12', mode: 'remote' },
+  { key: 'optiexpress', company: 'Optiexpress C.A.', start: '2023-09', end: '2024-02', mode: 'onsite' },
+  { key: 'coromoto', company: 'Panificadora Coromoto', start: '2021-10', end: '2022-02', mode: 'onsite' },
 ];
 
-export function Experience() {
-  const { t } = useLanguage();
+const MONTHS = {
+  es: ['Ene.', 'Feb.', 'Mar.', 'Abr.', 'May.', 'Jun.', 'Jul.', 'Ago.', 'Sep.', 'Oct.', 'Nov.', 'Dic.'],
+  en: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.', 'Jul.', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'],
+};
 
-  const period = (job: Job) =>
-    job.end === job.start ? job.start : `${job.start} — ${job.end ?? t('experience.present')}`;
+export function Experience() {
+  const { t, language } = useLanguage();
+
+  const fmt = (ym: string) => {
+    const [y, m] = ym.split('-').map(Number);
+    return `${MONTHS[language][m - 1]} ${y}`;
+  };
+  const period = (job: Job) => `${fmt(job.start)} — ${job.end ? fmt(job.end) : t('experience.present')}`;
 
   return (
     <section id="experience" className="py-20 bg-white dark:bg-gray-900">
@@ -60,8 +72,7 @@ export function Experience() {
                     <span className="text-blue-600 dark:text-blue-400">· {job.company}</span>
                   </h3>
                   <span className="text-sm text-gray-500 dark:text-gray-400">
-                    {period(job)}
-                    {job.remote && ` · ${t('experience.remote')}`}
+                    {period(job)} · {t(`experience.${job.mode}`)}
                   </span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400">{t(`experience.${job.key}.desc`)}</p>
