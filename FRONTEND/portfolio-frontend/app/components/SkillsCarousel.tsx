@@ -16,6 +16,10 @@ import {
   SiSpringboot,
   SiPostgresql,
   SiDocker,
+  SiIonic,
+  SiCapacitor,
+  SiWordpress,
+  SiOdoo,
 } from 'react-icons/si';
 import { DiCss3Full, DiJava } from 'react-icons/di';
 import { VscVscode } from 'react-icons/vsc';
@@ -44,6 +48,10 @@ const skills: Skill[] = [
   { name: 'HTML5', Icon: SiHtml5, color: '#E34F26', level: 98, descKey: 'skills.html.desc' },
   { name: 'CSS3', Icon: DiCss3Full, color: '#1572B6', level: 98, descKey: 'skills.css.desc' },
   { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#06B6D4', level: 95, descKey: 'skills.tailwind.desc' },
+  { name: 'Ionic', Icon: SiIonic, color: '#3880FF', level: 75, descKey: 'skills.ionic.desc' },
+  { name: 'Capacitor', Icon: SiCapacitor, color: '#119EFF', level: 75, descKey: 'skills.capacitor.desc' },
+  { name: 'WordPress', Icon: SiWordpress, color: '#21759B', level: 75, descKey: 'skills.wordpress.desc' },
+  { name: 'Odoo', Icon: SiOdoo, color: '#714B67', level: 70, descKey: 'skills.odoo.desc' },
   { name: 'Python', Icon: SiPython, color: '#3776AB', level: 85, descKey: 'skills.python.desc' },
   { name: 'Java', Icon: DiJava, color: '#ED8B00', level: 80, descKey: 'skills.java.desc' },
   { name: 'Node.js', Icon: SiNodedotjs, color: '#339933', level: 75, descKey: 'skills.nodejs.desc' },

@@ -68,7 +68,7 @@ const PERSON_JSON_LD = {
   ],
   sameAs: [
     "https://github.com/azerpa56",
-    "https://www.linkedin.com/in/alejandro-zerpa-555a3b18b",
+    "https://www.linkedin.com/in/alejandro-zerpa-dev/",
   ],
 };
 
